@@ -71,6 +71,9 @@
 
 
 @media (max-width: 480px) {
+    .section-about {
+        padding: 6rem 0;
+    }
     .title-about {
         font-size: 1.8rem;
     }

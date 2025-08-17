@@ -50,7 +50,8 @@ h6 {
     padding: 0 20px;
 }
 
-.logo-container, .cv-container {
+.logo-container,
+.cv-container {
     display: flex;
     align-items: center;
 }
@@ -132,26 +133,142 @@ main {
     padding: 1rem 30px;
 }
 
-.home-container,.about-container, .services-container, .portfolio-container, .contact-container {
+/* ===== Home Section ===== */
+.section-home {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #111 0%, #222 100%);
+  border-radius: 30px
+}
+
+.home-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+/* Typography */
+.home-content h2 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: #0062ff;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.home-paragraph {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+.home-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 6px rgba(79, 70, 229, 0.25);
+}
+
+.btn-primary:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(79, 70, 229, 0.3);
+}
+
+.btn-secondary {
+  background: white;
+  color: #4f46e5;
+  border: 2px solid #4f46e5;
+}
+
+.btn-secondary:hover {
+  background: #eef2ff;
+  transform: translateY(-2px);
+}
+
+/* Image */
+.home-content img {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+  .section-home {
+    padding: 4rem 1rem;
+  }
+  
+  .home-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-paragraph {
+    font-size: 1.25rem;
+  }
+  
+  .bottom-paragraph {
+    font-size: 1.1rem;
+  }
+}
+
+.section-about {
+    padding: 4rem 0 0;
+}
+
+.about-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
 }
 
-.title-home, .title-about, .title-services, .title-portfolio, .title-contact {
+.title-about {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
     color: #ffffff;
 }
 
-.about-content, .home-content {
+.about-content {
     display: flex;
-    gap: 3rem;
+    gap: 4rem;
     align-items: center;
 }
 
-.about-text, .home-text {
+.about-text,
+.home-text {
     flex: 1;
 }
 
@@ -162,7 +279,7 @@ main {
     border-bottom: 1px solid #fa3a3a;
 }
 
-.about-paragraph, .home-paragraph {
+.about-paragraph {
     padding: 2rem;
     text-align: right;
     border: solid 1px white;
@@ -184,3 +301,68 @@ main {
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
 }
 
+/* Skills Section */
+.section-skills {
+    padding: 10rem 0;
+}
+
+.skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.title-skills {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Skills Card Grid */
+.skills-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Individual Skill Category */
+.skill-category {
+    background: #222;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+}
+
+.skill-category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #4486c9;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-category li {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.skill-category li::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+    /* Blue bullet point */
+}
