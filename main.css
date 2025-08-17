@@ -216,34 +216,6 @@ main {
   display: block;
 }
 
-/* ===== Responsive Adjustments ===== */
-@media (max-width: 768px) {
-  .section-home {
-    padding: 4rem 1rem;
-  }
-  
-  .home-buttons {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-  
-  .btn-primary, .btn-secondary {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .top-paragraph {
-    font-size: 1.25rem;
-  }
-  
-  .bottom-paragraph {
-    font-size: 1.1rem;
-  }
-}
-
 .section-about {
     padding: 4rem 0 0;
 }
