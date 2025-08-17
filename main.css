@@ -140,7 +140,12 @@ main {
   align-items: center;
   padding: 2rem;
   background: linear-gradient(135deg, #111 0%, #222 100%);
-  border-radius: 30px
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  margin-top: 2rem;
 }
 
 .home-content {
