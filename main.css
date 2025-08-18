@@ -156,7 +156,7 @@ main {
 }
 
 /* Typography */
-.home-content h2 {
+.home-title {
     font-size: clamp(2.5rem, 6vw, 4rem);
     color: #0062ff;
     margin-bottom: 1rem;
