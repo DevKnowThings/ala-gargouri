@@ -472,7 +472,13 @@ main {
 
 /* Support Section */
 .section-support {
-    padding: 4rem 0; /* Light neutral background */
+    padding: 4rem 0;
+    background-color: #222;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
 .support-container {
